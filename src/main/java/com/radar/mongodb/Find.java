@@ -19,7 +19,7 @@ import static com.mongodb.client.model.Filters.eq;
 public class Find {
     public static void main(String[] args) {
         // Replace the uri string with your MongoDB deployment's connection string
-        String uri = "mongodb+srv://rdlarosa2_db_user:V4ll4v4c4@cluster0.c8l7t3g.mongodb.net/";
+        String uri = "mongodb+srv://" + args[0] + ":" + args[1]  +"@cluster0.c8l7t3g.mongodb.net/";
 	System.out.println("Find:main: Inicio del metodo");
         try (MongoClient mongoClient = MongoClients.create(uri)) {
             MongoDatabase database = mongoClient.getDatabase("sample_mflix");

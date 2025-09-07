@@ -65,12 +65,12 @@
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
             <version>3.3.0</version> <!-- Use a recent version -->
-	    <!-- 
+	    <!--
 	    <configuration>
                 <mainClass>com.radar.mongodb.Find</mainClass>
                 <arguments>
-                    <argument>foo</argument>
-                    <argument>bar</argument>
+                    <argument>rdlarosa2_db_user</argument>
+                    <argument>Passwd135</argument>
                 </arguments>
             </configuration>
 	    -->

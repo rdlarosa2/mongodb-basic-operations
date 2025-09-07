@@ -11,10 +11,10 @@ public class FindSpecificMovie {
 
     public static void main( String[] args ) {
         // Replace the placeholder with your MongoDB deployment's connection string
-        String uri = "mongodb+srv://rdlarosa2_db_user:V4ll4v4c4@cluster0.c8l7t3g.mongodb.net/";
+        String uri = "mongodb+srv://" + args[0] + ":" + args[1] + "@cluster0.c8l7t3g.mongodb.net/";
         try (MongoClient mongoClient = MongoClients.create(uri)) {
             MongoDatabase database = mongoClient.getDatabase("sample_mflix");
-            MongoCollection<Document> collection = database.getCollection("movies");wq
+            MongoCollection<Document> collection = database.getCollection("movies");
             Document doc = collection.find(eq("title", "Back to the Future")).first();
             if (doc != null) {
                 System.out.println(doc.toJson());
